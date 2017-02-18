@@ -10,9 +10,9 @@ if [[ $EUID -ne 0 ]]; then
    echo "Error:This script must be run as root!" 1>&2
    exit 1
 fi
-cd /tmp
-rm -f shadowsocks_mini.tar.gz
-wget https://raw.githubusercontent.com/blademainer/miwifi-ss/master/mini/shadowsocks_mini.tar.gz
+# cd /tmp
+# rm -f shadowsocks_mini.tar.gz
+# wget https://raw.githubusercontent.com/blademainer/miwifi-ss/master/mini/shadowsocks_mini.tar.gz
 tar zxf shadowsocks_mini.tar.gz
 
 # install shadowsocks ss-redir to /data/usr/sbin
@@ -69,7 +69,7 @@ echo "iptables -t nat -A PREROUTING -p tcp -m set --match-set gfwlist dst -j RED
 
 #install successfully
 rm -rf /tmp/shadowsocks_mini
-rm -f /tmp/shadowsocks_mini.tar.gz
+# rm -f /tmp/shadowsocks_mini.tar.gz
 echo ""
 echo "Shadowsocks安装成功！"
 echo ""
